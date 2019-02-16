@@ -25,9 +25,9 @@ namespace client {
 static data collect_data() {
 	return data{
 		os::cpu_use_percent(),
-		os::process_count(),
+		os::used_memory(),
 		os::total_memory(),
-		os::used_memory()
+		os::process_count()
 	};
 }
 
@@ -36,9 +36,9 @@ static web::json::value data_to_json(const data& data) noexcept {
 	json::value v(json::value::object());
 	json::object& o(v.as_object());
 	o[L"cpu_percent"] = data.get_cpu_percent();
+	o[L"used_memory_in_bytes"] = data.get_used_memory();
+	o[L"total_memory_in_bytes"] = data.get_total_memory();
 	o[L"process_count"] = data.get_process_count();
-	o[L"total_memory"] = data.get_total_memory();
-	o[L"used_memory"] = data.get_used_memory();
 	return v;
 }
 
