@@ -16,7 +16,7 @@ using namespace crossover::monitor;
 namespace po = boost::program_options;
 
 #define LOG CROSSOVER_MONITOR_LOG
-#define DEFAULT_SECONDS 2
+#define DEFAULT_SECONDS 5
 
 int main(int argc, char* argv[]) {
 	log::init();	
