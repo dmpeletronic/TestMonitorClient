@@ -25,8 +25,9 @@ namespace client {
 static data collect_data() {
 	return data{
 		os::cpu_use_percent(),
-		os::memory_use_percent(),
-		os::process_count()
+		os::process_count(),
+		os::total_memory(),
+		os::used_memory()
 	};
 }
 
@@ -35,8 +36,9 @@ static web::json::value data_to_json(const data& data) noexcept {
 	json::value v(json::value::object());
 	json::object& o(v.as_object());
 	o[L"cpu_percent"] = data.get_cpu_percent();
-	o[L"memory_percent"] = data.get_memory_percent();
 	o[L"process_count"] = data.get_process_count();
+	o[L"total_memory"] = data.get_total_memory();
+	o[L"used_memory"] = data.get_used_memory();
 	return v;
 }
 
@@ -92,7 +94,8 @@ application::application(
 	const std::chrono::seconds& period) :
 	pimpl_(new impl),
 	period_(period) {
-	if (period_ < chrono::seconds(1)) {
+	if (period_ < chrono::seconds(1) ||
+        period_ > chrono::seconds(INT_MAX)) {
 		throw invalid_argument("Invalid arguments to application constructor");
 	}
 }

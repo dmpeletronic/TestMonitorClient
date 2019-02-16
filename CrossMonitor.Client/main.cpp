@@ -16,6 +16,7 @@ using namespace crossover::monitor;
 namespace po = boost::program_options;
 
 #define LOG CROSSOVER_MONITOR_LOG
+#define DEFAULT_SECONDS 5
 
 int main(int argc, char* argv[]) {
 	log::init();	
@@ -53,8 +54,13 @@ int main(int argc, char* argv[]) {
 		log::set_file(vm["logfile"].as<string>());
 	}
 
-	try {		
-		client::application app(chrono::seconds(2));
+	try {
+		unsigned sec = DEFAULT_SECONDS;
+		if (vm.count("seconds")) {
+			sec = vm["seconds"].as<unsigned>();
+		}
+		chrono::seconds s(sec);
+		client::application app(s);
 		
 		os::set_termination_handler([&app]() {
 			try {

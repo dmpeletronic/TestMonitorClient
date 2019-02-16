@@ -97,6 +97,30 @@ float memory_use_percent() noexcept {
 	return used;
 }
 
+unsigned long long total_memory() noexcept {
+	MEMORYSTATUSEX mem;
+	mem.dwLength = sizeof(mem);
+
+	if (!GlobalMemoryStatusEx(&mem)) {
+		LOG(error) << "Failed to get memory info, code: " << GetLastError();
+		return 0;
+	}
+
+	return  mem.ullTotalPhys ;
+}
+
+unsigned long long used_memory() noexcept {
+	MEMORYSTATUSEX mem;
+	mem.dwLength = sizeof(mem);
+
+	if (!GlobalMemoryStatusEx(&mem)) {
+		LOG(error) << "Failed to get memory info, code: " << GetLastError();
+		return 0;
+	}
+
+	return  mem.ullTotalPhys - mem.ullAvailPhys;
+}
+
 } //namespace os
 } //namespace client
 } //namespace monitor
