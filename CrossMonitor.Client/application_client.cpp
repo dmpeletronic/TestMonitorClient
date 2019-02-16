@@ -92,7 +92,8 @@ application::application(
 	const std::chrono::seconds& period) :
 	pimpl_(new impl),
 	period_(period) {
-	if (period_ < chrono::seconds(1)) {
+	if (period_ < chrono::seconds(1) ||
+        period_ > chrono::seconds(INT_MAX)) {
 		throw invalid_argument("Invalid arguments to application constructor");
 	}
 }
