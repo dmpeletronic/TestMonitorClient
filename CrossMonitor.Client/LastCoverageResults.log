@@ -1,0 +1,29 @@
+[2018-10-27 09:35:34] [info] Start Program:
+Path:"C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe"
+Arguments:
+Working directory: "C:\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client\"
+Modules: Selected: C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Shared.lib C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.exe C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe Excluded: 
+Sources: Selected: C:\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Shared C:\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client C:\xo-monitor-cpp\cross-monitor-cpp Excluded: boost packages tests 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Html C:\xo-monitor-cpp\cross-monitor-cpp\html Binary C:\Users\Administrator\AppData\Local\Temp\2\koc24jcx.i41 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2018-10-27 09:35:35] [info] Module: C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe is selected because it matches selected pattern: C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe
+[2018-10-27 09:35:35] [info] ----------------------------------------------------
+[2018-10-27 09:35:35] [info] Coverage generated in Folder C:\xo-monitor-cpp\cross-monitor-cpp\html
+[2018-10-27 09:35:35] [info] ----------------------------------------------------
+[2018-10-27 09:35:35] [info] ----------------------------------------------------
+[2018-10-27 09:35:35] [info] Coverage binary generated in file: C:\Users\Administrator\AppData\Local\Temp\2\koc24jcx.i41
+[2018-10-27 09:35:35] [info] ----------------------------------------------------
+----------------------------
+--------
+[2018-10-27 09:45:24] [info] ----------------------------------------------------
+[2018-10-27 09:45:24] [info] Coverage binary generated in file: C:\Users\Administrator\AppData\Local\Temp\2\w3wdqhjf.02b
+[2018-10-27 09:45:24] [info] ----------------------------------------------------

@@ -1,0 +1,6 @@
+Starting application loop
+{"cpu_percent":100,"memory_percent":71,"process_count":102}
+{"cpu_percent":1.1905339956283569,"memory_percent":71,"process_count":102}
+{"cpu_percent":0.31027770042419434,"memory_percent":71,"process_count":102}
+{"cpu_percent":1.0846562385559082,"memory_percent":71,"process_count":102}
+Stop requested, waiting for tasks to finish

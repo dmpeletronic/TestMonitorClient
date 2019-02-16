@@ -1,0 +1,21 @@
+[2018-10-25 07:32:44] [info] Start Program:
+Path:"C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.dll"
+Arguments:
+Working directory: "C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client.Tests\"
+Modules: Selected: C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Shared.lib C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.exe C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.dll C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.GTests.exe Excluded: 
+Sources: Selected: C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Shared C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client C:\mywork\xo-monitor-cpp\cross-monitor-cpp C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client.GTests C:\mywork\xo-monitor-cpp\cross-monitor-cpp\packages\gmock.1.7.0\lib\native\src\gmock C:\mywork\xo-monitor-cpp\cross-monitor-cpp\packages\gmock.1.7.0\lib\native\src\gtest Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Administrator\AppData\Local\Temp\2\op2giaxo.rhz 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2018-10-25 07:32:44] [error] Error: Cannot run process, check if it is a valid executable:
+Path:"C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.dll"
+Arguments:
+Working directory: "C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client.Tests\"Last error code:193
