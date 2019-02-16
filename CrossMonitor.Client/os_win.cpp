@@ -121,6 +121,73 @@ unsigned long long used_memory() noexcept {
 	return  mem.ullTotalPhys - mem.ullAvailPhys;
 }
 
+unsigned long long total_disk_read() noexcept {
+
+	HANDLE dev = CreateFileW(L"\\\\.\\PhysicalDrive0",
+		0,
+		FILE_SHARE_READ | FILE_SHARE_WRITE,
+		NULL,
+		OPEN_EXISTING,
+		0,
+		NULL);
+
+	if (dev == INVALID_HANDLE_VALUE) {
+		LOG(error) << "Could not open drive for reading. Error: " << GetLastError();
+		return 0;
+	}
+
+	DWORD bytes = 0;
+	DISK_PERFORMANCE disk_info = { 0 };
+	if (!DeviceIoControl(
+		dev,
+		IOCTL_DISK_PERFORMANCE,
+		NULL,
+		0,
+		&disk_info,
+		sizeof(disk_info),
+		&bytes,
+		NULL)) {
+		LOG(error) << "Could not read disk performance. Error: " << GetLastError();
+		return 0;
+	}
+
+	return disk_info.BytesRead.QuadPart;
+}
+
+unsigned long long total_disk_write() noexcept {
+
+
+	HANDLE dev = CreateFileW(L"\\\\.\\PhysicalDrive0",
+		0,
+		FILE_SHARE_READ | FILE_SHARE_WRITE,
+		NULL,
+		OPEN_EXISTING,
+		0,
+		NULL);
+
+	if (dev == INVALID_HANDLE_VALUE) {
+		LOG(error) << "Could not open drive for reading. Error: " << GetLastError();
+		return 0;
+	}
+
+	DWORD bytes = 0;
+	DISK_PERFORMANCE disk_info = { 0 };
+	if (!DeviceIoControl(
+		dev,
+		IOCTL_DISK_PERFORMANCE,
+		NULL,
+		0,
+		&disk_info,
+		sizeof(disk_info),
+		&bytes,
+		NULL)) {
+		LOG(error) << "Could not read disk performance. Error: " << GetLastError();
+		return 0;
+	}
+
+	return disk_info.BytesWritten.QuadPart;
+}
+
 } //namespace os
 } //namespace client
 } //namespace monitor

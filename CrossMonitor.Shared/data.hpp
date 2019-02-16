@@ -20,11 +20,18 @@ public:
 	 * @param total_memory Total available memory in bytes (0 to UINT_MAX)
 	 * @param used_memory Used memory in bytes (0 to UINT_MAX)
 	 */
-	data(float cpu_percent, unsigned long long used_memory, unsigned long long total_memory, unsigned process_count) {
+	data(float cpu_percent,
+		unsigned long long used_memory,
+		unsigned long long total_memory,
+		unsigned process_count,
+		unsigned long long total_disk_read,
+		unsigned long long total_disk_write ) {
 		set_cpu_percent(cpu_percent);
 		set_used_memory(used_memory);
 		set_total_memory(total_memory);
 		set_process_count(process_count);
+		set_total_disk_read(total_disk_read);
+		set_total_disk_write(total_disk_write);
 	}
 	data(const data& other) = default;
 	data& operator=(const data& rhs) = default;	
@@ -80,11 +87,35 @@ public:
 		return used_memory_;
 	}
 
+	/**
+	* Setter.
+	* @param total_disk_read Total read bytes from disk
+	*/
+	void set_total_disk_read(unsigned long long total_disk_read) {
+		total_disk_read_ = total_disk_read;
+	}
+	unsigned long long get_total_disk_read() const noexcept {
+		return total_disk_read_;
+	}
+
+	/**
+	* Setter.
+	* @param total_disk_write Total write bytes to disk.
+	*/
+	void set_total_disk_write(unsigned long long total_disk_write) {
+		total_disk_write_ = total_disk_write;
+	}
+	unsigned long long get_total_disk_write() const noexcept {
+		return total_disk_write_;
+	}
+
 private:
 	float cpu_percent_;
 	unsigned long long used_memory_;
 	unsigned long long total_memory_;
 	unsigned process_count_;
+	unsigned long long total_disk_read_;
+	unsigned long long total_disk_write_;
 }; //struct data
 
 } //namespace monitor

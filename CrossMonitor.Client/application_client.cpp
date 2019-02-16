@@ -27,7 +27,9 @@ static data collect_data() {
 		os::cpu_use_percent(),
 		os::used_memory(),
 		os::total_memory(),
-		os::process_count()
+		os::process_count(),
+		os::total_disk_read(),
+		os::total_disk_write()
 	};
 }
 
@@ -39,6 +41,8 @@ static web::json::value data_to_json(const data& data) noexcept {
 	o[L"used_memory_in_bytes"] = data.get_used_memory();
 	o[L"total_memory_in_bytes"] = data.get_total_memory();
 	o[L"process_count"] = data.get_process_count();
+	o[L"total_disk_read"] = data.get_total_disk_read();
+	o[L"total_disk_write"] = data.get_total_disk_write();
 	return v;
 }
 
