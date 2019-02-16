@@ -20,11 +20,11 @@ public:
 	 * @param total_memory Total available memory in bytes (0 to UINT_MAX)
 	 * @param used_memory Used memory in bytes (0 to UINT_MAX)
 	 */
-	data(float cpu_percent, unsigned process_count, unsigned long long total_memory, unsigned long long used_memory) {
+	data(float cpu_percent, unsigned long long used_memory, unsigned long long total_memory, unsigned process_count) {
 		set_cpu_percent(cpu_percent);
-		set_process_count(process_count);
-		set_total_memory(total_memory);
 		set_used_memory(used_memory);
+		set_total_memory(total_memory);
+		set_process_count(process_count);
 	}
 	data(const data& other) = default;
 	data& operator=(const data& rhs) = default;	
@@ -65,7 +65,7 @@ public:
 	void set_total_memory(unsigned long long total_memory) {
 		total_memory_ = total_memory;
 	}
-	unsigned get_total_memory() const noexcept {
+	unsigned long long get_total_memory() const noexcept {
 		return total_memory_;
 	}
 
@@ -76,15 +76,15 @@ public:
 	void set_used_memory(unsigned long long used_memory) {
 		used_memory_ = used_memory;
 	}
-	unsigned get_used_memory() const noexcept {
+	unsigned long long get_used_memory() const noexcept {
 		return used_memory_;
 	}
 
 private:
 	float cpu_percent_;
-	unsigned process_count_;
-	unsigned long long total_memory_;
 	unsigned long long used_memory_;
+	unsigned long long total_memory_;
+	unsigned process_count_;
 }; //struct data
 
 } //namespace monitor
