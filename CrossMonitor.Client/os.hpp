@@ -27,6 +27,14 @@ unsigned long long total_memory() noexcept;
 * Get total physical memory available
 */
 unsigned long long used_memory() noexcept;
+/*
+* Get total physical disk read in bytes
+*/
+unsigned long long total_disk_read() noexcept;
+/*
+* Get total physical disk write in bytes
+*/
+unsigned long long total_disk_write() noexcept;
 
 } //namespace os
 } //namespace client
