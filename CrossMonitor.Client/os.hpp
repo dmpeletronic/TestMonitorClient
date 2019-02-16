@@ -19,6 +19,14 @@ float cpu_use_percent() noexcept;
  * Gets physical memory use percentage (0 to 100).
  */
 float memory_use_percent() noexcept;
+/*
+ * Get total physical memory available
+ */
+unsigned long long total_memory() noexcept;
+/*
+* Get total physical memory available
+*/
+unsigned long long used_memory() noexcept;
 
 } //namespace os
 } //namespace client
