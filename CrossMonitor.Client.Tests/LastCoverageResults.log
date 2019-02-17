@@ -1,21 +1,21 @@
-[2018-10-25 07:32:44] [info] Start Program:
-Path:"C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.dll"
+[2019-02-16 23:47:02] [info] Start Program:
+Path:"E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe"
 Arguments:
-Working directory: "C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client.Tests\"
-Modules: Selected: C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Shared.lib C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.exe C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.dll C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.GTests.exe Excluded: 
-Sources: Selected: C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Shared C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client C:\mywork\xo-monitor-cpp\cross-monitor-cpp C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client.GTests C:\mywork\xo-monitor-cpp\cross-monitor-cpp\packages\gmock.1.7.0\lib\native\src\gmock C:\mywork\xo-monitor-cpp\cross-monitor-cpp\packages\gmock.1.7.0\lib\native\src\gtest Excluded: 
+Working directory: "E:\Danilo\cross-monitor-cpp\CrossMonitor.Client.Tests\"
+Modules: Selected: E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Shared.lib E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Client.exe E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe Excluded: 
+Sources: Selected: E:\Danilo\cross-monitor-cpp\CrossMonitor.Shared E:\Danilo\cross-monitor-cpp\CrossMonitor.Client E:\Danilo\cross-monitor-cpp Excluded: *packages* 
 Log Level: Normal
 Cover Children: 0
 Aggregate by file: 1
 Continue after C++ exception: 0
 Optimized build support: 0
-Export: Binary C:\Users\Administrator\AppData\Local\Temp\2\op2giaxo.rhz 
+Export: Binary C:\Users\Daiana\AppData\Local\Temp\zjfuh1sk.0ii 
 Input coverage: 
 Unified diff: 
 Excluded line regular expressions: 
 Substitute pdb source paths: 
 
-[2018-10-25 07:32:44] [error] Error: Cannot run process, check if it is a valid executable:
-Path:"C:\mywork\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.dll"
-Arguments:
-Working directory: "C:\mywork\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client.Tests\"Last error code:193
+[2019-02-16 23:47:02] [info] Module: E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe is selected because it matches selected pattern: E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe
+[2019-02-16 23:47:03] [info] ----------------------------------------------------
+[2019-02-16 23:47:03] [info] Coverage binary generated in file: C:\Users\Daiana\AppData\Local\Temp\zjfuh1sk.0ii
+[2019-02-16 23:47:03] [info] ----------------------------------------------------

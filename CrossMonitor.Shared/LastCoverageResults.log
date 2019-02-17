@@ -1,21 +1,24 @@
-[2018-10-26 12:21:23] [info] Start Program:
-Path:"C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe"
+[2019-02-16 23:45:44] [info] Start Program:
+Path:"E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Shared.lib"
 Arguments:
-Working directory: "C:\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Shared\"
-Modules: Selected: C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Shared.lib C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.exe C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe Excluded: 
-Sources: Selected: C:\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Shared C:\xo-monitor-cpp\cross-monitor-cpp\CrossMonitor.Client C:\xo-monitor-cpp\cross-monitor-cpp Excluded: boost 
+Working directory: "E:\Danilo\cross-monitor-cpp\CrossMonitor.Shared\"
+Modules: Selected: E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Shared.lib E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Client.exe E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe Excluded: 
+Sources: Selected: E:\Danilo\cross-monitor-cpp\CrossMonitor.Shared E:\Danilo\cross-monitor-cpp\CrossMonitor.Client E:\Danilo\cross-monitor-cpp Excluded: 
 Log Level: Normal
 Cover Children: 0
 Aggregate by file: 1
 Continue after C++ exception: 0
 Optimized build support: 0
-Export: Binary C:\Users\Administrator\AppData\Local\Temp\2\xguq5rus.edr 
+Export: Binary C:\Users\Daiana\AppData\Local\Temp\cqdnonla.sub 
 Input coverage: 
 Unified diff: 
 Excluded line regular expressions: 
 Substitute pdb source paths: 
 
-[2018-10-26 12:21:23] [info] Module: C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe is selected because it matches selected pattern: C:\xo-monitor-cpp\cross-monitor-cpp\Debug\CrossMonitor.Client.Tests.exe
-[2018-10-26 12:21:23] [info] ----------------------------------------------------
-[2018-10-26 12:21:23] [info] Coverage binary generated in file: C:\Users\Administrator\AppData\Local\Temp\2\xguq5rus.edr
-[2018-10-26 12:21:23] [info] ----------------------------------------------------
+[2019-02-16 23:45:44] [error] Error: Cannot run process, check if it is a valid executable:
+
+*** This version support only 32 bits executable ***.
+
+Path:"E:\Danilo\cross-monitor-cpp\Debug\CrossMonitor.Shared.lib"
+Arguments:
+Working directory: "E:\Danilo\cross-monitor-cpp\CrossMonitor.Shared\"Last error code:193

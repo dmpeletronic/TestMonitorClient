@@ -5,6 +5,10 @@
 #include <memory>
 #include <string>
 #include <chrono>
+#include <data.hpp>
+#include <cpprest/json.h>
+
+using namespace web;
 
 namespace crossover {
 namespace monitor {
@@ -38,6 +42,12 @@ public:
 	void stop() noexcept;
 
 private:
+	friend class CrossMonitorTest_RunStop_Test;
+	friend class CrossMonitorClient_JsonData_Test;
+	data CollectData();
+	web::json::value data_to_json(const data& data) noexcept;
+
+
 	struct impl;
 
 	std::unique_ptr<impl> pimpl_;
