@@ -15,7 +15,7 @@ interruptible_sleep(const std::chrono::milliseconds& time,
 	chrono::milliseconds elapsed(0);
 	bool sleeping = false;
 	
-	while ((sleeping = elapsed < time) && !interrupt) {
+	while ((sleeping = elapsed < time) && !interrupt.load()) {
 		this_thread::sleep_for(check_period);
 		elapsed += check_period;
 	}

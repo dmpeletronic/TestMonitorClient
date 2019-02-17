@@ -3,9 +3,7 @@
 
 #include <log.hpp>
 #include <utils.hpp>
-#include <data.hpp>
 
-#include <cpprest/json.h>
 #include <cpprest/http_client.h>
 #include <cpprest/asyncrt_utils.h>
 
@@ -17,12 +15,13 @@
 #define LOG CROSSOVER_MONITOR_LOG
 
 using namespace std;
+using namespace web;
 
 namespace crossover {
 namespace monitor {
 namespace client {
 
-static data collect_data() {
+data application::CollectData() {
 	return data{
 		os::cpu_use_percent(),
 		os::used_memory(),
@@ -33,8 +32,8 @@ static data collect_data() {
 	};
 }
 
-static web::json::value data_to_json(const data& data) noexcept {
-	using namespace web;
+web::json::value application::data_to_json(const data& data) noexcept {
+
 	json::value v(json::value::object());
 	json::object& o(v.as_object());
 	o[L"cpu_percent"] = data.get_cpu_percent();
@@ -46,10 +45,8 @@ static web::json::value data_to_json(const data& data) noexcept {
 	return v;
 }
 
-static void send_data(const string& url, const string& key, const data& data) {
-	using namespace web;
+static void send_data(const string& url, const string& key, const json::value jsondata) {
 
-	const json::value jsondata(data_to_json(data));
 	const uri url_full(utility::conversions::to_string_t(url));
 
 	uri_builder builder;
@@ -128,7 +125,7 @@ void application::run() {
 	do {
 		try {
 			using namespace web;
-			auto collected_data = collect_data();
+			auto collected_data = CollectData();
 			const json::value jsondata(data_to_json(collected_data));
  			LOG(info) << jsondata.to_string() ;
 		}
